@@ -1,6 +1,3 @@
-<style>
-        @import url("fonts/stylesheet.css");
-</style>
 <h1>Registration</h1>
 <div class="test">
         <input type="text" class="form" placeholder="Name" id="name-field" [(ngModel)]="user.name"/><br>
@@ -13,7 +10,7 @@
         <br><span>Date of birth</span><br>
         <input type="text" class="form" id="dateOfBirth-field" [(ngModel)]="user.dateOfBirth"/><br>
         <br><span>Gender</span><br>
-        <input type="radio" value="female" id="gender-field" [(ngModel)]="user.gender"/> Female
-        <input type="radio" value="male" id="gender-field" [(ngModel)]="user.gender"/> Male<br>
+        <input type="radio" value="0" id="gender-field" [(ngModel)]="user.gender"/> Female
+        <input type="radio" value="1" id="gender-field" [(ngModel)]="user.gender"/> Male<br>
         <h2><button (click)="save()"  style="padding-left:65%; background:transparent;">Next ></button></h2><br>
 </div>

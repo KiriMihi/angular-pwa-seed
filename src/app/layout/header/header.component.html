@@ -14,26 +14,4 @@
     </button>-->
 
   <ng-content></ng-content>
-
-  <ion-buttons end>
-
-
-    <div *ngIf="!infoAtRightMenu">
-      <button ion-button (click)="presentUserInfoPopover($event)">
-        <ion-icon name="person"></ion-icon>
-        <span invisible-to="mobile">{{name}}</span>
-      </button>
-
-      <button ion-button (click)="presentInfoPopover($event)">
-        <ion-icon name="information-circle"></ion-icon>
-      </button>
-    </div>
-
-      <button *ngIf="showRightMenuButton" ion-button icon-only (click)="toggleRightMenu()" menuToggle="rightMenu">
-        <ion-icon name="more"></ion-icon>
-      </button>
-
-
-  </ion-buttons>
-
 </ion-navbar>

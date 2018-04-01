@@ -7,7 +7,7 @@ let inputPhoto = document.getElementById('file-input');
 @Component({
     moduleId: module.id,
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css'],
+    styleUrls: ['./login.component.css', './fonts/stylesheet.css'],
 })
 
 

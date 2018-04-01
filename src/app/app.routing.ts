@@ -5,14 +5,19 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AUTH_SERVICE } from './shared/services/base-auth.service';
 import { OidcAuthService } from './shared/services/auth.service';
 import { AuthGuardService } from './shared/services/auth-guard.service';
+import { LoginComponent } from "./login/login.component";
+import { ImageComponent } from "./image/image.component";
 
 
 
 export const routes: Routes = [
     {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full',
+        path: 'login',
+        component : LoginComponent
+    },
+     {
+        path: 'image',
+        component : ImageComponent
     },
     {
         path: '',
@@ -20,10 +25,6 @@ export const routes: Routes = [
             title: 'Home'
         },
         children: [
-            {
-                path: 'login',
-                loadChildren: './login/login.module'
-            },
             {
                 path: 'dashboard',
                 loadChildren: './dashboard/dashboard.module#DashboardModule'

@@ -1,43 +1,25 @@
-import { MenuController } from 'ionic-angular';
-import { Component, OnInit, ApplicationRef, AfterViewInit, NgZone } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import UserModel from '../models/UserModel'
-
-// import LoadImage from 'blueimp-load-image';
-// import {PAGES, HEADER_HEIGHT} from '../shared/constants';
-// import {setLiveCamera} from '../shared/config';
-// import {showPage} from '../shared/helpers';
-// import AnnotatePage from './annotate';
-// import AboutPage from './about';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
 let inputPhoto = document.getElementById('file-input');
-const user: UserModel = new UserModel();
 @Component({
     moduleId: module.id,
-    selector: 'my-app',
-	template: `
-	  <div>
-	    <input type="text" id="email-field" (change)="onChangeEmail($event)"/>
-	    <input type="password" id="password-field" (change)="onChangePassword($event)"/>
-	  </div>
-	`,
+	  templateUrl: './login.component.html'
 })
 
+
+@Injectable()
 export class LoginComponent {
+  user: UserModel;
 
-
-    constructor(public menu: MenuController, public zone: NgZone, public application: ApplicationRef) {
+    constructor(private http: Http) {
+      this.user = new UserModel();
     }
 
-
-  onChangeEmail(event) {
-      console.log(event.target)
-    //user.email = event.target.
-  }
-  onChangePassword(event) {
-    console.log('onChange');
-    var files = event.srcElement.files;
-
-    console.log(event);
+    save() {
+    console.log(this.user);  // { first: '', last: '' }
+    this.http.post("  ", {moo:"foo",goo:"loo"}).subscribe(res => console.log(res.json()));
   }
 }

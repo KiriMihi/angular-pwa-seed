@@ -2,16 +2,16 @@ import { NgModule }             from '@angular/core';
 import { Routes,
          RouterModule }         from '@angular/router';
 
-import { LoginComponent }   from './login.component';
+import { ImageComponent }   from './image.component';
 import {NgForm} from '@angular/forms';
 
 
 const routes: Routes = [
     {
-        path: 'login',
-        component: LoginComponent,
+        path: 'image',
+        component: ImageComponent,
         data: {
-            title: 'Login'
+            title: 'Image'
         }
     }
 ];
@@ -20,6 +20,9 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class LoginRoutingModule {
-   
+export class ImageRoutingModule {
+    name: string;
+    save() {
+    console.log(this.name);  // { first: '', last: '' }
+  }
 }

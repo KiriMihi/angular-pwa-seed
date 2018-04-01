@@ -1,2 +1,15 @@
-
-<my-app>Loading...</my-app>
+<div>
+        <span>name and surname</span>
+        <input type="text" id="name-field" [(ngModel)]="user.name"/>
+        <span>email</span>
+        <input type="text" id="email-field" [(ngModel)]="user.email"/>
+        <span>password</span>
+        <input type="password" id="password-field" [(ngModel)]="user.password"/>
+        <span>weight</span>
+        <input type="number" id="weight-field" [(ngModel)]="user.weight"/>
+        <span>growth</span>
+        <input type="number" id="growth-field" [(ngModel)]="user.growth"/>
+        <span>dateOfBirth</span>
+        <input type="text" id="dateOfBirth-field" [(ngModel)]="user.dateOfBirth"/>
+        <button (click)="save()">Set value</button>
+</div>

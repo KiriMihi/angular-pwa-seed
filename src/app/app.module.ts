@@ -27,7 +27,6 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 
 // Routing Module
 import { AppRoutingModule } from './app.routing';
-
 import { LayoutModule } from './layout/layout.module';
 import { Network } from '@ionic-native/network';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -36,6 +35,8 @@ import { MenuItemComponent } from './shared/components/menu-item/menu-item.compo
 import { AUTH_SERVICE } from './shared/services/base-auth.service';
 import { httpFactory } from './shared/services/intercepted-http.service';
 import { YoloOidcAuthService } from './shared/services/yolo-auth.service';
+import { LoginComponent } from "./login/login.component";
+import { ImageComponent } from './image/image.component';
 
 
 function isCordova(platform?: Platform): boolean {
@@ -62,7 +63,9 @@ export function authFactory(platform: Platform, yoloAuth: YoloOidcAuthService, o
 @NgModule({
   declarations: [
     MyApp,
-    MenuItemComponent
+    MenuItemComponent,
+    LoginComponent,
+    ImageComponent
   ],
   imports: [
     HttpModule,
@@ -71,7 +74,7 @@ export function authFactory(platform: Platform, yoloAuth: YoloOidcAuthService, o
     BrowserAnimationsModule,
     CommonModule,
     AppRoutingModule,
-
+    
     ChartsModule,
 
     IonicModule.forRoot(MyApp),

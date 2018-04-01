@@ -10,6 +10,7 @@ import { Router } from "@angular/router";
 })
 export class ImageComponent implements OnInit {
   searchString: string;
+  productname: string;
   constructor(private http: Http) {
 
   }
@@ -30,7 +31,7 @@ export class ImageComponent implements OnInit {
       headers: headers
     }).subscribe(res =>
     {
-      alert(res.json().product.product_name)
+     this.productname = res.json().product.product_name;
     });
   }
 

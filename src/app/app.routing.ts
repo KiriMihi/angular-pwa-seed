@@ -15,7 +15,7 @@ import { SigninComponent } from "./signin/signin.component";
 
 export const routes: Routes = [
     {
-        path: 'login',
+        path: 'register',
         component : LoginComponent
     },
      {

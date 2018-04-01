@@ -41,6 +41,7 @@ h2 {
     color: #ffffff;
 }
 .newacc {
+    color: black !important;
     font-size:12px;
     text-decoration: underline;
     position: relative;

@@ -9,19 +9,28 @@ import { Router } from "@angular/router";
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent implements OnInit {
+  searchString: string;
+  constructor(private http: Http) {
 
-  constructor(private http: Http) { 
-    let headers = new Headers();
-     headers.append('Authorization', localStorage.token); 
-     this.http.get("https://dietify-api.herokuapp.com/api/user", {
-      headers: headers
-    }).subscribe(res => 
-      {
-        console.log(res.json());
-      });;
   }
 
   ngOnInit() {
+
+  }
+
+  onSearch() {
+    this.searchByBarcode(this.searchString);
+  }
+
+  searchByBarcode(barcode) {
+    let headers = new Headers();
+    headers.append('Authorization', localStorage.token);
+    this.http.post("https://dietify-api.herokuapp.com/api/product-instance", {code: "20203"}, {
+      headers: headers
+    }).subscribe(res =>
+    {
+      console.log(res.json());
+    });
   }
 
 }

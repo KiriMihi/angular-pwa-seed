@@ -10,6 +10,16 @@ export class ProfileComponent implements OnInit {
 weight: number;
 used: number;
 total: number;
+
+proteinsTotal:number;
+proteinsUsed:number;
+
+fatsTotal:number;
+fatsUsed:number;
+
+carbohydratesTotal:number;
+carbohydratesUsed:number;
+
   constructor(private http: Http) {
 
  let headers = new Headers();
@@ -19,9 +29,19 @@ total: number;
     }).subscribe(res => 
       {
         console.log(res.json());
-        var result = res.json().calorie;
-        this.used = result.used;
-        this.total = result.total;
+        var result = res.json();
+        this.used = result.calorie.used;
+        this.total = result.calorie.total;
+
+
+        this.proteinsTotal = result.dashboard.proteins.used;
+        this.proteinsUsed = result.dashboard.proteins.total;
+
+        this.fatsTotal = result.dashboard.fats.used;
+        this.fatsUsed = result.dashboard.fats.total;
+
+        this.carbohydratesTotal = result.dashboard.carbohydrates.used;
+        this.carbohydratesUsed = result.dashboard.carbohydrates.total;
       });
 
        this.http.get("https://dietify-api.herokuapp.com/api/user", {

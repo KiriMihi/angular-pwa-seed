@@ -7,4 +7,5 @@ export default class {
   weight: number;
   growth: number;
   dateOfBirth: string;
+  gender: number;
 }

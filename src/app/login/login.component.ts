@@ -6,7 +6,8 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 let inputPhoto = document.getElementById('file-input');
 @Component({
     moduleId: module.id,
-	  templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 
 
@@ -20,6 +21,6 @@ export class LoginComponent {
 
     save() {
     console.log(this.user);  // { first: '', last: '' }
-    this.http.post("  ", {moo:"foo",goo:"loo"}).subscribe(res => console.log(res.json()));
+    this.http.post("https://dietify-api.herokuapp.com/api/user/",this.user).subscribe(res => console.log(res.json()));
   }
 }

@@ -11,5 +11,7 @@
         <input type="number" id="growth-field" [(ngModel)]="user.growth"/>
         <span>dateOfBirth</span>
         <input type="text" id="dateOfBirth-field" [(ngModel)]="user.dateOfBirth"/>
+        <button (click)="save()">gender</button>
+        <input type="text" id="gender-field" [(ngModel)]="user.gender"/>
         <button (click)="save()">Set value</button>
 </div>

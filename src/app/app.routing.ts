@@ -7,6 +7,7 @@ import { OidcAuthService } from './shared/services/auth.service';
 import { AuthGuardService } from './shared/services/auth-guard.service';
 import { LoginComponent } from "./login/login.component";
 import { ImageComponent } from "./image/image.component";
+import { DietComponent } from "./diet/diet.component";
 
 
 
@@ -14,6 +15,10 @@ export const routes: Routes = [
     {
         path: 'login',
         component : LoginComponent
+    },
+      {
+        path: 'diet',
+        component : DietComponent
     },
      {
         path: 'image',

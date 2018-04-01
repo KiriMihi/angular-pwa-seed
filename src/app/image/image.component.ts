@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import UserModel from '../models/UserModel'
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'seed-image',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: Http) { 
+    let headers = new Headers();
+     headers.append('Authorization', localStorage.token); 
+     this.http.get("https://dietify-api.herokuapp.com/api/user", {
+      headers: headers
+    }).subscribe(res => 
+      {
+        console.log(res.json());
+      });;
+  }
 
   ngOnInit() {
   }

@@ -15,11 +15,11 @@ import { SigninComponent } from "./signin/signin.component";
 
 export const routes: Routes = [
     {
-        path: 'login',
+        path: 'register',
         component : LoginComponent
     },
      {
-        path: 'signin',
+        path: '',
         component : SigninComponent
     },
      {
@@ -33,26 +33,6 @@ export const routes: Routes = [
      {
         path: 'image',
         component : ImageComponent
-    },
-    {
-        path: '',
-        data: {
-            title: 'Home'
-        },
-        children: [
-            {
-                path: 'dashboard',
-                loadChildren: './dashboard/dashboard.module#DashboardModule'
-            },
-            {
-                path: 'protected',
-                loadChildren: './protected/protected.module#ProtectedModule'
-            },
-            {
-                path: 'unauthorized',
-                loadChildren: './unauthorized/unauthorized.module#UnauthorizedModule'
-            },
-        ]
     }
 ];
 

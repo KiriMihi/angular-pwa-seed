@@ -54,11 +54,6 @@ export class UserinfoComponent implements OnInit {
   //   // });
   // }
 
-
-  static isUser(user: Oidc.User | void): user is Oidc.User {
-    return (<Oidc.User>user) !== undefined;
-  }
-
   // get image() {
   //   return this.authService.authenticated.flatMap(r => {
   //     const picture = r.user.getClaim('picture');

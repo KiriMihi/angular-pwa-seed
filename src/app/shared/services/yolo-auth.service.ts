@@ -57,14 +57,13 @@ export abstract class YoloBaseAuthService<T extends BaseAuthService<any>> extend
 
 
 @Injectable()
-export class YoloOidcAuthService extends YoloBaseAuthService<OidcAuthService> {
+export class YoloOidcAuthService {
   private _wrappedAuthService: OidcAuthService;
   protected get wrappedAuthService(): OidcAuthService {
     return this._wrappedAuthService;
   }
 
   constructor(private authService: OidcAuthService, public toastCtrl: ToastController) {
-    super(toastCtrl);
     const _authService = (authService as OidcAuthService);
     this._wrappedAuthService = _authService;
   }

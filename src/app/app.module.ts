@@ -15,12 +15,10 @@ import { MyApp } from './app.component';
 
 import { ChartsModule } from 'ng2-charts';
 
-import { environment } from '../environments/environment';
 
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
-import { FirebaseAuthService } from './shared/services/firebase-auth.service';
 
 import { OidcAuthService } from './shared/services/auth.service';
 import { AuthGuardService } from './shared/services/auth-guard.service';
@@ -91,7 +89,6 @@ export function authFactory(platform: Platform, yoloAuth: YoloOidcAuthService, o
 
     LayoutModule,
 
-    environment.production ? ServiceWorkerModule.register('./ngsw-worker.js') : []
   ],
   bootstrap: [IonicApp],
   entryComponents: [

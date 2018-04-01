@@ -1,17 +1,19 @@
-<div>
-        <span>name and surname</span>
-        <input type="text" id="name-field" [(ngModel)]="user.name"/>
-        <span>email</span>
-        <input type="text" id="email-field" [(ngModel)]="user.email"/>
-        <span>password</span>
-        <input type="password" id="password-field" [(ngModel)]="user.password"/>
-        <span>weight</span>
-        <input type="number" id="weight-field" [(ngModel)]="user.weight"/>
-        <span>growth</span>
-        <input type="number" id="growth-field" [(ngModel)]="user.growth"/>
-        <span>dateOfBirth</span>
-        <input type="text" id="dateOfBirth-field" [(ngModel)]="user.dateOfBirth"/>
-        <button (click)="save()">gender</button>
-        <input type="text" id="gender-field" [(ngModel)]="user.gender"/>
-        <button (click)="save()">Set value</button>
+<style>
+        @import url("fonts/stylesheet.css");
+</style>
+<h1>Registration</h1>
+<div class="test">
+        <input type="text" class="form" placeholder="Name" id="name-field" [(ngModel)]="user.name"/><br>
+        <input type="text" class="form" placeholder="E-mail" id="email-field" [(ngModel)]="user.email"/><br>
+        <input type="password" class="form" placeholder="Password" id="password-field" [(ngModel)]="user.password"/><br>
+        <br><span>Weight</span><br>
+        <input type="number" min="0" class="roll" id="weight-field" [(ngModel)]="user.weight"/>
+        <div>Height</div>
+        <input type="number" min="0" class="roll" id="growth-field" [(ngModel)]="user.growth"/><br>
+        <br><span>Date of birth</span><br>
+        <input type="text" class="form" id="dateOfBirth-field" [(ngModel)]="user.dateOfBirth"/><br>
+        <br><span>Gender</span><br>
+        <input type="radio" value="female" id="gender-field" [(ngModel)]="user.gender"/> Female
+        <input type="radio" value="male" id="gender-field" [(ngModel)]="user.gender"/> Male<br>
+        <h2><button (click)="save()"  style="padding-left:65%; background:transparent;">Next ></button></h2><br>
 </div>

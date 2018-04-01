@@ -14,29 +14,25 @@ export class DietComponent implements OnInit {
     
     this.dietList=[    
     {    
+      "Id": 1,    
+      "Name": "Proper nutrition"    
+    },    
+    {    
+      "Id": 2,    
+      "Name": "Diabetes of the 1st degree"    
+    },    
+    {    
       "Id": 3,    
-      "Name": "Attorney Case"    
+      "Name": "Diabetes of 2nd degree"    
     },    
     {    
-      "Id": 1035,    
-      "Name": "bikesh appeal"    
+      "Id": 4,    
+      "Name": "For losing weight"    
     },    
     {    
-      "Id": 22,    
-      "Name": "BikeshAppeal"    
-    },    
-    {    
-      "Id": 20,    
-      "Name": "Case Info"    
-    },    
-    {    
-      "Id": 15,    
-      "Name": "Case Infoe"    
-    },    
-    {    
-      "Id": 11,    
-      "Name": "Case Prep"    
-    }        
+      "Id": 5,    
+      "Name": "For weight gain"    
+    }
   ];
   }
 

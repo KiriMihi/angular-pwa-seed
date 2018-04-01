@@ -38,6 +38,8 @@ import { YoloOidcAuthService } from './shared/services/yolo-auth.service';
 import { LoginComponent } from "./login/login.component";
 import { ImageComponent } from './image/image.component';
 import { DietComponent } from './diet/diet.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 function isCordova(platform?: Platform): boolean {
@@ -67,7 +69,9 @@ export function authFactory(platform: Platform, yoloAuth: YoloOidcAuthService, o
     MenuItemComponent,
     LoginComponent,
     ImageComponent,
-    DietComponent
+    DietComponent,
+    ProfileComponent,
+    SigninComponent
   ],
   imports: [
     HttpModule,

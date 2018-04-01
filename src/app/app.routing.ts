@@ -8,6 +8,8 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 import { LoginComponent } from "./login/login.component";
 import { ImageComponent } from "./image/image.component";
 import { DietComponent } from "./diet/diet.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { SigninComponent } from "./signin/signin.component";
 
 
 
@@ -15,6 +17,14 @@ export const routes: Routes = [
     {
         path: 'login',
         component : LoginComponent
+    },
+     {
+        path: 'signin',
+        component : SigninComponent
+    },
+     {
+        path: 'profile',
+        component : ProfileComponent
     },
       {
         path: 'diet',

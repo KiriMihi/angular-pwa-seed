@@ -26,24 +26,3 @@ h2 {
     border-bottom: 1px solid #000000;
     height: 30px;
 }
-.roll {
-    width: 135px;
-    height: 135px;
-    border: none;
-    text-align: center;
-    font-family: Avenir Next Cyr;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 48px;
-}
-.roll #growth-field {
-    position: relative;
-    width: 135px;
-    height: 135px;
-    border: none;
-    text-align: center;
-    font-family: Avenir Next Cyr;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 48px;
-}

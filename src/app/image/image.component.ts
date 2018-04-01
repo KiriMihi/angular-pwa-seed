@@ -25,11 +25,12 @@ export class ImageComponent implements OnInit {
   searchByBarcode(barcode) {
     let headers = new Headers();
     headers.append('Authorization', localStorage.token);
-    this.http.post("https://dietify-api.herokuapp.com/api/product-instance", {code: "20203"}, {
+    console
+    this.http.post("https://dietify-api.herokuapp.com/api/product-instance", {code: barcode}, {
       headers: headers
     }).subscribe(res =>
     {
-      console.log(res.json());
+      alert(res.json().product.product_name)
     });
   }
 

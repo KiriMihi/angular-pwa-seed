@@ -1,0 +1,7 @@
+<span>Diets</span> 
+<select id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="dietId" name="Id" (change)="selectDiet();">  
+                           <option selected="" value=""></option>  
+                        <option [ngValue]="k.Id" *ngFor="let k of dietList">  
+                            {{k.Name}}  
+                     </option>  
+                </select>  

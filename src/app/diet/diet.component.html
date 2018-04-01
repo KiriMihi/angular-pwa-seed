@@ -1,16 +1,57 @@
+<br>
 <div class="bighat"><h1>Choose your program</h1></div>
 <div class="test">
-<select  id="Id" #Id="ngModel" class="hideLabel form-control" [(ngModel)]="dietId" name="Id" (change)="selectDiet();">  
+<select  id="Id" #Id="ngModel" class="hideLabel form-control" style="width: 70%; text-align: center;" [(ngModel)]="dietId" name="Id" (change)="selectDiet();">  
     <option [ngValue]="k.Id" *ngFor="let k of dietList">  
         {{k.Name}}  
     </option>  
 </select>  
 </div>
-
-<div *ngIf="dietId === 1" class="">1</div>
-<div *ngIf="dietId === 2" class="">2</div>
-<div *ngIf="dietId === 3" class="">3</div>
-<div *ngIf="dietId === 4" class="">4</div>
-<div *ngIf="dietId === 5" class="">5</div>
+<br><br><br>
+<div *ngIf="dietId === 1" class="test">
+    <h1>Balanced diet</h1>
+    <p>
+            This program is super nice because: <br>
+            - this <br>
+            - also this <br>
+            - and that. <br>
+    </p>
+</div>
+<div *ngIf="dietId === 2" class="test">
+        <h1>Diabetes type I</h1>
+        <p>
+                This program is super nice because: <br>
+                - this <br>
+                - also this <br>
+                - and that. <br>
+        </p>
+</div>
+<div *ngIf="dietId === 3" class="test">
+        <h1>Diabetes type II</h1>
+        <p>
+                This program is super nice because: <br>
+                - this <br>
+                - also this <br>
+                - and that. <br>
+        </p>
+</div>
+<div *ngIf="dietId === 4" class="test">
+        <h1>Weight loss</h1>
+        <p>
+                This program is super nice because: <br>
+                - this <br>
+                - also this <br>
+                - and that. <br>
+        </p>
+</div>
+<div *ngIf="dietId === 5" class="test">
+        <h1>Weight gain</h1>
+        <p>
+                This program is super nice because: <br>
+                - this <br>
+                - also this <br>
+                - and that. <br>
+        </p>
+</div>
 
 <h2><button (click)="next()"  style="padding-left:65%; background:transparent;">Next ></button></h2><br>

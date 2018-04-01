@@ -22,10 +22,17 @@ h2 {
     font-family: Avenir Next Cyr;
     font-weight: normal;
     font-style: normal;
-    padding-left: 25px;
+
 }
 .diet {
     font-family: Avenir Next Cyr;
     font-weight: normal;
     font-style: normal;
+}
+p {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    padding-left: 25px;
 }

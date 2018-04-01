@@ -1,3 +1,49 @@
-p {
-    color: red;
+h1 {
+    font-family: Avenir Next Cyr;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    padding-left: 25px;
+}
+h2 {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+}
+.test {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 25px;
+}
+.form 
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    border-bottom: 1px solid #000000;
+    height: 30px;
+}
+.roll {
+    width: 135px;
+    height: 135px;
+    border: none;
+    text-align: center;
+    font-family: Avenir Next Cyr;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 48px;
+}
+.roll #growth-field {
+    position: relative;
+    width: 135px;
+    height: 135px;
+    border: none;
+    text-align: center;
+    font-family: Avenir Next Cyr;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 48px;
 }

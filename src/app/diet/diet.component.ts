@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 export class DietComponent implements OnInit {
   dietList: any;
   dietId:Number; 
-  constructor(private http: Http) {
+  constructor(private http: Http, private router: Router) {
     
     this.dietList=[    
     {    
@@ -44,11 +44,17 @@ selectDiet()
 {
   let headers = new Headers();
   headers.append('Authorization', localStorage.token); 
-  this.http.put("https://dietify-api.herokuapp.com/api/user/diet/"+ this.dietId, {
+  this.http.put("https://dietify-api.herokuapp.com/api/user/diet/"+ this.dietId, {}, {
         headers: headers
       }).subscribe(res => 
         {
           console.log(res.json());
         });;
+    }
+
+    next()
+{
+
+  this.router.navigate(['/profile']);
     }
   }

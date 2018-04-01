@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'seed-diet',
   templateUrl: './diet.component.html',
-  styleUrls: ['./diet.component.css']
+  styleUrls: ['./diet.component.css', './fonts/stylesheet.css']
 })
 export class DietComponent implements OnInit {
   dietList: any;

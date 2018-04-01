@@ -4,7 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 @Component({
   selector: 'seed-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css', './fonts/stylesheet.css']
 })
 export class ProfileComponent implements OnInit {
 weight: number;

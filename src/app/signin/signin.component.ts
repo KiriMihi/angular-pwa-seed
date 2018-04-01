@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'seed-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  styleUrls: ['./signin.component.css', './fonts/stylesheet.css']
 })
 export class SigninComponent implements OnInit {
 email: string;

@@ -1,0 +1,31 @@
+.bighat {
+    background-color: #fff;
+    position: relative;
+    padding: 0; 
+    display: inline;
+    vertical-align: center;
+}
+h1 {
+    font-family: Avenir Next Cyr;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    padding-left: 25px;
+}
+h2 {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+}
+.test {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 25px;
+}
+.diet {
+    font-family: Avenir Next Cyr;
+    font-weight: normal;
+    font-style: normal;
+}
